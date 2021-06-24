@@ -1,0 +1,22 @@
+PODS:
+  - better_skeleton (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - better_skeleton (from `.symlinks/plugins/better_skeleton/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  better_skeleton:
+    :path: ".symlinks/plugins/better_skeleton/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  better_skeleton: 866932d513e35159b5bc7e6fd449cb3ba1f5bf1f
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.10.1
