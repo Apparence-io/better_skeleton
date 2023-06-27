@@ -4,13 +4,13 @@ version: 0.0.2
 repository: https://github.com/Apparence-io/better_skeleton.git
 
 environment:
-  sdk: ">=2.14.0 <4.0.0"
+  sdk: '>=3.0.5 <4.0.0'
   flutter: ">=1.20.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  vector_math: ^2.1.0
+  vector_math: ^2.1.4
 
 dev_dependencies:
   flutter_test:
