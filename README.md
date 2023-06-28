@@ -22,52 +22,27 @@ Show a glass effect using a single AnimationController over a list of Widgets
 ## 📖&nbsp; Getting started
 
 Create an animation controller in repeat mode then just provide this controller to every AnimatedSkeleton. 
+
 This effect is made using a custom RenderWidget. 
 
-Example of using:
+- Create an animation controller (in your stateful widget for exemple)
+
 ```dart
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
-  late final AnimationController animationController;
-
-  @override
-  void initState() {
-    super.initState();
-    animationController = AnimationController(vsync: this, duration: Duration(milliseconds: 1000))..repeat();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Column(
-          children: [
-            SizedBox(height: 100),
-            AnimatedSkeleton(
-              listenable: animationController,
-              child: FakeCard(),
-            ),
-            AnimatedSkeleton(
-              listenable: animationController,
-              child: FakeCard(),
-            ),
-            AnimatedSkeleton(
-              listenable: animationController,
-              child: FakeCard2(),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+final AnimationController animationController = AnimationController(vsync: this, duration: Duration(milliseconds: 1000))..repeat();
 ```
 
-> Note: FakeCard is a container widget we made with just a grey background. See example. 
+- Create a fake container widget (this is a placeholder widget which is shown when data is loading).
+
+- Wrap the fake widget with the Plugin.
+
+```dart
+AnimatedSkeleton(
+  listenable: animationController,
+  child: FakeCard(),
+);
+```
+
+> Note: See example for more. 
 
 ## 📣&nbsp; Sponsor
 
